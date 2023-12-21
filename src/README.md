@@ -28,12 +28,12 @@ another that visualizes the popularity of event genres (via a pie chart).
 
 ## Key Features:
 
-● Filter Events by City.
-● Show/Hide Event Details.
-● Specify Number of Events.
-● Use the App When Offline.
-● Add an App Shortcut to the Home Screen.
-● Display Charts Visualizing Event Details.
+- Filter Events by City.
+- Show/Hide Event Details.
+- Specify Number of Events.
+- Use the App When Offline.
+- Add an App Shortcut to the Home Screen.
+- Display Charts Visualizing Event Details.
 
 ## User Stories:
 
