@@ -117,3 +117,7 @@ Then the app should display a chart
 And the chart should represent the number of upcoming events in each city
 And each city on the chart should be labeled
 And the user should be able to visually interpret the distribution of events in different cities
+
+# Project Website
+
+For live demo, please visit the link [Here](https://lexivn.github.io/meet).
