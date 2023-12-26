@@ -12,7 +12,7 @@ normal web application, but it will also reap the benefits of both serverless ar
 ● Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.
 ● PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,
 responsive design, and cross-platform compatibility.
-For this app, you’ll be using a TDD approach, where you write tests before writing the actual
+For this app, you’ll be using a TDD approach (Test Driven Development), where you write tests before writing the actual
 functionality for your app in code. Writing tests forces you to focus on the requirements of your
 application before jumping into the code. TDD relies on the repetition of a very short development
 cycle, allowing you to get immediate feedback and deliver high-quality code.
@@ -23,6 +23,10 @@ you want and produce a variety of output formats. Your app will allow users to s
 get a list of events hosted in that city. For the data visualization component, you’ll add two
 charts—one that shows how many events will take place in each location (via a scatterplot), and
 another that visualizes the popularity of event genres (via a pie chart).
+
+## Use of the Serverless Function in the App.
+
+Serverless Authorization Function (AWS Lambda OAuth) will be used to provide authentication to the clients of my Meet app by using the third-party app of Google. This will allow the clients to authenticate without the need for clients to share credentials, an then an acess token or authorization code will be generated for each user, that authorizes your Meet app user to see the event data from the Google API.
 
 # Your Project Requirements
 
