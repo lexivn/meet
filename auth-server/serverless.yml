@@ -4,14 +4,15 @@
 #
 # For full config options, check the docs:
 #    docs.serverless.com
-
+#
 service: auth-server
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   region: eu-central-1
-  timeout: 30
+  timeout: 30 # optional, in seconds, default is 6
+  # Because of the “cold start” that serverless functions suffer from, six seconds isn’t always enough to initialize and execute a function.
   environment:
     CLIENT_ID: ${file(config.json):CLIENT_ID}
     CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
