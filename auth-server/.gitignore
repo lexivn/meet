@@ -5,8 +5,4 @@ jspm_packages
 # Serverless directories
 .serverless
 
-# Auth-server secret
 config.json
-
-# Templates
-serverless_template.yml
