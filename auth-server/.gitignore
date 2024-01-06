@@ -1,9 +1,9 @@
+
+# Google API credentials
+config.json
 # package directories
 node_modules
 jspm_packages
 
 # Serverless directories
 .serverless
-
-# Google API credentials
-config.json
