@@ -6,14 +6,15 @@ import './App.css';
 import NumberOfEvents from './components/NumberOfEvents';
 
 function App() {
-  const [noe, setNoe] = useState('32');
+  const [events, setEvents] = useState([]);
+  const [currentNOE, setCurrentNOE] = useState(32);
   
   return (
     <div className="App">
       {/* <div id="event-list" ></div> */}
       <CitySearch />
       <EventList />
-      <NumberOfEvents setNumberOfEvents={setNoe}/>      
+      <NumberOfEvents setNumberOfEvents={setCurrentNOE}/>      
     </div>
   );
 }
