@@ -47,18 +47,18 @@ const removeQuery = () => {
 const getToken = async (code) => {
   try {
     const encodeCode = encodeURIComponent(code);
-  const response = await fetch(
-    // 'YOUR_GET_ACCESS_TOKEN_ENDPOINT' + '/' + encodeCode
-    'https://0sr5wjz6nc.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode
-  );
-  const { access_token } = await response.json();
-  access_token && localStorage.setItem("access_token", access_token);
+    const response = await fetch(
+      // 'YOUR_GET_ACCESS_TOKEN_ENDPOINT' + '/' + encodeCode
+      'https://0sr5wjz6nc.execute-api.eu-central-1.amazonaws.com/dev/api/token' + '/' + encodeCode
+    );
+    const { access_token } = await response.json();
+    access_token && localStorage.setItem("access_token", access_token);
 
-  return access_token;
+    return access_token;
 
   } catch (error) {
     error.json();
-  }  
+  }
 };
 
 /**
