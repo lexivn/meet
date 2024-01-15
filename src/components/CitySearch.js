@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const CitySearch = ({ allLocations }) => {
+const CitySearch = ({ allLocations, setCurrentCity }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+    setSuggestions(allLocations);
+  }, [`${allLocations}`]);
+// }, [JSON.stringify(allLocations)]);
 
   // The onChange event handler input field to implement how the suggestions state
   //  will be filled when you filter down allLocations.
@@ -23,6 +28,7 @@ const CitySearch = ({ allLocations }) => {
     const value = event.target.textContent;
     setQuery(value);
     setShowSuggestions(false); // to hide the list
+    setCurrentCity(value)
   };
 
   return (
