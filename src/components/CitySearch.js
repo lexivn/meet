@@ -28,7 +28,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     const value = event.target.textContent;
     setQuery(value);
     setShowSuggestions(false); // to hide the list
-    setCurrentCity(value)
+    setCurrentCity(value);
   };
 
   return (
