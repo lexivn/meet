@@ -13,9 +13,9 @@ const NumberOfEvents = ({ setNumberOfEvents }) => {
   return (
     <div >
       <input id="number-of-events"
-        type="text"
+        type="text"        
         value={eventNumber}
-        onChange={handleInputChange}
+        onChange={handleInputChange}        
       />
     </div>
   )

@@ -25,3 +25,18 @@ test('the value has to change when user types in the textbox', async () => {
 
 })
 
+describe('<NumberOfEvents /> integration ', () => {  
+  let NumberOfEventsComponent;
+  beforeEach (() => {
+    NumberOfEventsComponent = render(<NumberOfEvents setNumberOfEvents={() => {}}/>);
+  })
+  
+
+  test('The numbers of events has to change when user types in the textbox', async () => {
+    const numberOfEventsInput = NumberOfEventsComponent.queryByRole('textbox');
+    const user = userEvent.setup();
+    await user.type(numberOfEventsInput, '{backspace}{backspace}10');
+    expect(numberOfEventsInput).toHaveValue('10');
+  });
+})
+
