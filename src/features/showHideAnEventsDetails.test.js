@@ -16,10 +16,13 @@ defineFeature(feature, (test) => {
     then,
     and,
   }) => {
-    let AppComponent;    
-    given("there are events available in the app -> the main apge is open", () => {
-      AppComponent = render(<App />);      
-    });
+    let AppComponent;
+    given(
+      "there are events available in the app -> the main apge is open",
+      () => {
+        AppComponent = render(<App />);
+      }
+    );
 
     when(
       "the user navigates to the events page -> the app displays a list of events",
@@ -34,10 +37,11 @@ defineFeature(feature, (test) => {
       }
     );
 
-    then(
-      "each event element should be in a collapsed state by default",
-      () => {}
-    );
+    then("each event element should be in a collapsed state by default", () => {
+      const AppDOM = AppComponent.container.firstChild;
+      const EventDetails = AppDOM.querySelector(".details");
+      expect(EventDetails).not.toBeInTheDocument;
+    });
 
     and(
       "the user should see a summary or basic information for each event",
