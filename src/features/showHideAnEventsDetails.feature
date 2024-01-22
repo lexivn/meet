@@ -1,7 +1,7 @@
 Feature: Show/Hide Event Details
   Scenario: An event element is collapsed by default.
-    Given there are events available in the app -> the main apge is open
-    When the user navigates to the events page -> the app displays a list of events
+    Given there are events available in the app
+    When the user navigates to the events page
     Then each event element should be in a collapsed state by default
     And the user should see a summary or basic information for each event
 
