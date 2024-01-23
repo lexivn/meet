@@ -1,7 +1,7 @@
 /*
  ** Writing Acceptance Test BBD, using jest-cucumber
  */
-import { render, waitFor, within, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { loadFeature, defineFeature } from "jest-cucumber";
 import App from "../App";
 import Event from "../components/Event";
@@ -18,36 +18,33 @@ defineFeature(feature, (test) => {
     then,
     and,
   }) => {
-    let AppComponent;    
-    given(
-      "there are events available in the app",
-      () => {
-        AppComponent = render(<App />);
-      }
-    );
+    let AppComponent;
+    given("there are events available in the app", () => {
+      AppComponent = render(<App />);
+    });
 
-    when(
-      "the user navigates to the events page",
-     
-      () => {}
-    );
+    when("the user navigates to the events page", () => {});
 
-    then(
-      "each event element should be in a collapsed state by default",
-      async () => {
-        const Events = await getEvents();
-        render(<Event event={Events[0]} />)
-       
-        
-        expect(screen.getByText(Events[0].summary)).toBeInTheDocument();
-        expect(screen.getByText(Events[0].location)).toBeInTheDocument();
-      }
-    );
+    then("each event element should be in a collapsed state by default", () => {
+      const EventDOM = AppComponent.container.firstChild;
+      const details = EventDOM.querySelector('.details');
+      expect(details).not.toBeInTheDocument();
+    });
 
     and(
       "the user should see a summary or basic information for each event",
       async () => {
-  
+        const Events = await getEvents();
+        render(<Event event={Events[0]} />);
+        expect(screen.getByText(Events[0].summary)).toBeInTheDocument();
+        expect(screen.getByText(Events[0].location)).toBeInTheDocument();
+        // const allEvents = await getEvents();
+        // await waitFor(() => {
+        //   const EventComponent = render(<Event event={allEvents[0]} />);
+        //   expect(
+        //     EventComponent.queryByText(allEvents[0].summary)
+        //   ).toBeInTheDocument();
+        // });
       }
     );
   });

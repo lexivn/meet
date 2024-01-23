@@ -24,12 +24,12 @@ defineFeature(feature, (test) => {
       AppComponent = render(<App />);
     });
 
-    then("the user should see the list of all upcoming events.", async () => {
+    then('the user should see the list of all upcoming events.', async () => {
       const AppDOM = AppComponent.container.firstChild;
       const EventListDOM = AppDOM.querySelector("#event-list");
 
       await waitFor(() => {
-        const EventListItems = within(EventListDOM).queryAllByRole("listitem");
+        const EventListItems = within(EventListDOM).queryAllByRole('listitem');
         expect(EventListItems.length).toBe(32);
       });
     });
