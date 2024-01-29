@@ -5,10 +5,7 @@ import { render, waitFor, within, screen } from "@testing-library/react";
 import { loadFeature, defineFeature } from "jest-cucumber";
 import App from "../App";
 import userEvent from "@testing-library/user-event";
-import Event from "../components/Event";
-import { getEvents } from "../api";
-import NumberOfEvents from "../components/NumberOfEvents";
-import EventList from "../components/EventList";
+
 
 const feature = loadFeature("./src/features/specifyNmberOfEvents.feature");
 
@@ -71,7 +68,6 @@ defineFeature(feature, (test) => {
       "the number of events the user typed should be equal the number of events displayed",
       () => {
         const AppDOM = AppComponent.container.firstChild;
-        // const EventDOM = AppDOM.querySelector('#event-list');
         const EventList = within(AppDOM).queryAllByRole('listitem');
         expect(EventList.length).toEqual(10);
       }
