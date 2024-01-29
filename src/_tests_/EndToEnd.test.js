@@ -42,6 +42,7 @@ describe("show/hide event details", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false,
+      // headless: true,
       slowMo: 250, // Slow down by 250ms
       timeout: 0, // removes any puppeteer/browser timeout limitations (this isn't the same as the timeout of jest)
     });
