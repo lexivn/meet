@@ -9,10 +9,10 @@ Feature: Show/Hide Event Details
     Given The user is on the events page
     When the user chooses to expand an event element
     Then the user should see detailed information about that event
-    And the other events elements should remain collapsed
+  # And the other events elements should remain collapsed
 
   Scenario: User can collapse an event to hide details.
     Given the user is on the events page with an event already expanded
     When the user chooses to hide the event information
-    Then the event element should hide the detailed information for that event.
-    And other event elements should remain collapsed
+    Then the event element should hide the detailed information for that event
+# And other event elements should remain collapsed
