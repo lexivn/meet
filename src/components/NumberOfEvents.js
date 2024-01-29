@@ -15,7 +15,8 @@ const NumberOfEvents = ({ setNumberOfEvents }) => {
       <input id="number-of-events"
         type="text"        
         value={eventNumber}
-        onChange={handleInputChange}        
+        onChange={handleInputChange}
+        data-testid="number-of-events-input"        
       />
     </div>
   )

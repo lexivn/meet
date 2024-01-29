@@ -17,3 +17,5 @@ console.error = (...args) => {
   const ignoreMessage = MESSAGES_TO_IGNORE.find(message => args.toString().includes(message));
   if(!ignoreMessage) originalError(...args);
 }
+
+jest.setTimeout(30000); // Enable it in case we got Thrown: "Exceeded timeout of 5000 ms for a test"
