@@ -11,9 +11,19 @@ function App() {
   const [allLocaltions, setAllLocations] = useState([]);
   const [currentCity, setCurrentCity] = useState("See all cities");
 
+  const fetchData = async () => {
+    const allEvents = await getEvents();
+    const filteredEvents =
+      currentCity === "See all cities"
+        ? allEvents
+        : allEvents.filter((event) => event.location === currentCity);
+    setEvents(filteredEvents.slice(0, currentNOE));
+    setAllLocations(extractLocations(allEvents));
+  };
+
   useEffect(() => {
     fetchData();
-  }, [currentCity, setCurrentNOE]);
+  }, [currentCity, currentNOE]);
 
   // const fetchData = async () => {
   //   const allEvents = await getEvents();
@@ -21,18 +31,12 @@ function App() {
   //   setAllLocations(extractLocations(allEvents)); // Getting all the Locations
   // }
 
-  const fetchData = async () => {
-    const allEvents = await getEvents();
-    const filteredEvents = currentCity === "See all cities" ?
-      allEvents :
-      allEvents.filter(event => event.location === currentCity)
-    setEvents(filteredEvents.slice(0, currentNOE));
-    setAllLocations(extractLocations(allEvents));
-  }
-
   return (
     <div className="App">
-      <CitySearch allLocations={allLocaltions} setCurrentCity={setCurrentCity} />
+      <CitySearch
+        allLocations={allLocaltions}
+        setCurrentCity={setCurrentCity}
+      />
       <NumberOfEvents setNumberOfEvents={setCurrentNOE} />
       <EventList events={events} />
     </div>
