@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, [currentCity, setCurrentNOE]);
+  }, [currentCity, currentNOE]);
 
   // const fetchData = async () => {
   //   const allEvents = await getEvents();
