@@ -7,7 +7,11 @@ import { getEvents, extractLocations } from '../api';
 describe('<CitySearch /> component', () => {
   let CitySearchComponent;
   beforeEach(() => {
-    CitySearchComponent = render(<CitySearch allLocations={[]} />);
+    CitySearchComponent = render(<CitySearch
+      allLocations={[]}
+      setCurrentCity={() => { }}
+      setInfoAlert={() => { }}
+    />);
   });
 
   test('renders text input', () => {
@@ -41,7 +45,10 @@ describe('<CitySearch /> component', () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);
-    CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />)
+    CitySearchComponent.rerender(<CitySearch 
+      allLocations={allLocations} 
+      setInfoAlert={() => { }}
+       />)
 
 
     // User types "Berlin" in city textbox
@@ -65,10 +72,11 @@ describe('<CitySearch /> component', () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);
-    CitySearchComponent.rerender(<CitySearch 
+    CitySearchComponent.rerender(<CitySearch
       allLocations={allLocations}
-      setCurrentCity={() => {}} 
-      />);
+      setCurrentCity={() => { }}
+      setInfoAlert={() => { }}
+    />);
 
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     await user.type(cityTextBox, "Berlin");
@@ -87,7 +95,7 @@ describe('<CitySearch /> component', () => {
 describe('<CitySearch /> integration', () => {
   test('renders suggestions list when the app is rendered.', async () => {
     const user = userEvent.setup();
-    const AppComponent = render(<App/>);
+    const AppComponent = render(<App />);
     const AppDOM = AppComponent.container.firstChild;
 
     const CitySearchDOM = AppDOM.querySelector('#city-search');
@@ -100,7 +108,7 @@ describe('<CitySearch /> integration', () => {
     await waitFor(() => {
       const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
       expect(suggestionListItems.length).toBe(allLocations.length + 1);
-     });
+    });
   });
 
 })
