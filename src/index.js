@@ -6,7 +6,6 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 // Import and initialize atatus to monitor your application
 import * as atatus from 'atatus-spa';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 atatus.config('fd55bba74bd042a4be04d4cb7efd91e9').install();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
