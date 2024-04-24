@@ -39,12 +39,30 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 > - **Scenario 2:** User should see a list of suggestions when they search for a city.
 > - **Scenario 3:** User can select a city from the suggested list.
 
+### Given-When-Then Format
+
+> #### Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.
+>
+> - _Given_ user hasn't searched for any city.
+> - _When_ the user opens the app.
+> - _Then_ the user should see a list of upcoming events.
+
+> #### Scenario 2: User should see a list of suggestions when they search for a city
+>
+> - _Given_ the main page is open.
+> - _When_ user starts typing in the city textbox.
+> - _Then_ the user should received a list of cities (suggestions) that match what they've typed.
+
+> #### Scenario 3: Yser can select a city from the suggested list
+>
+> - _Given_ User was typing "Berlin" in the city AND the list of suggestions cities is showing.
+> - _When_ the user selects a city (e.g., "Berlin, GErmany") from the list.
+> - _Then_ their city should be changed to that city (i.e., "Berlin, Germany") AND the user should receive a list of upcoming event in that city.
+
 ### Feature 2: Show/Hide Event Details.
 
 > - **Scenario 1:** An event element is collapsed by default.
->
 > - **Scenario 2:** User can expand an event to see details.
->
 > - **Scenario 3:** User can collapse an event to hide details.
 
 > ### Given-When-Then Format
