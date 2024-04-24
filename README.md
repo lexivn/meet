@@ -71,8 +71,8 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 ### Feature 3: Specify Number of Events
 
-> **Scenario 1:** When user hasn’t specified a number, 32 events are shown by default.
-> **Scenario 2:** User can change the number of events displayed.
+> - **Scenario 1:** When user hasn’t specified a number, 32 events are shown by default.
+> - **Scenario 2:** User can change the number of events displayed.
 
 > ### Given-When-Then Format
 >
@@ -94,8 +94,8 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 ### Feature 4: Use the App When Offline
 
-> **Scenario 1:** Show cached data when there’s no internet connection.
-> **Scenario 2:** Show error when user changes search settings (city, number of events).
+> - **Scenario 1:** Show cached data when there’s no internet connection.
+> - **Scenario 2:** Show error when user changes search settings (city, number of events).
 
 > ### Given-When-Then Format
 
@@ -117,12 +117,12 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 ### Feature 5: Add an App Shortcut to the Home Screen
 
-Scenario 1: User can install the meet app as a shortcut on their device home screen.
-This feature does not need a development since it could be achieve by using the SO of the device where the app is running.
+> - **Scenario 1:** User can install the meet app as a shortcut on their device home screen.
+>   This feature does not need a development since it could be achieve by using the SO of the device where the app is running.
 
 ### Feature 6: Display Charts Visualizing Event Details
 
-> #### Scenario 1: Show a chart with the number of upcoming events in each city.
+> - #### Scenario 1: Show a chart with the number of upcoming events in each city.
 
 > ### Given-When-Then Format
 
