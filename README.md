@@ -48,8 +48,8 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 > - **Scenario 3:** User can collapse an event to hide details.
 
 > ### Given-When-Then Format
-
-> #### Scenario 1: Event element is collapsed by default
+>
+> #### Scenario 1: Event element is collapsed by default>
 >
 > - _Given_ there are events available in the app
 > - _When_ the user navigates to the events page
