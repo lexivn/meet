@@ -57,39 +57,48 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 >
 > #### Scenario 2: User can expand an event to see details.
 >
-> **Given\* The user is on the events page
-> **When* the user chooses to expand an event element
-> \*\*Then* the user should see detailed information about that event \*_And_ the other events elements should remain collapsed.
+> - _Given_ The user is on the events page
+> - _When_ the user chooses to expand an event element
+> - _Then_ the user should see detailed information about that event
+> - _And_ the other events elements should remain collapsed.
 >
 > ### Scenario 3: User can collapse an event to hide details.
 >
-> **Given\* the user is on the events page with an event already expanded
-> **When* the user chooses to hide the event information
-> \*\*Then* the event element should hide the detailed information for that event. \*_And_ other event elements should remain collapsed
+> - _Given_ the user is on the events page with an event already expanded
+> - _When_ the user chooses to hide the event information
+> - _Then_ the event element should hide the detailed information for that event.
+> - _And_ other event elements should remain collapsed
 
-### Feature 3: Specify Number of Events
+> ### Feature 3: Specify Number of Events
 
-Scenario 1: When user hasn’t specified a number, 32 events are shown by default.
-Scenario 2: User can change the number of events displayed.
-Given-When-Then Format
-Scenario 1: When user hasn’t specified a number, 32 events are shown by default.  
-When the user has not specified a number of events to view
-Then the app should display 32 events by default
-And the user should see a list containing information for each of the 32 events  
-Scenario 2: User can change the number of events displayed.
-Given the user is on the events page
-When the user selects the option to specify the number of events to view
-Then the app should provide a field to enter the desired number
-When the user enters a valid number
-And submits the form
-Then the events list should display the specified number of events
-And the user should see more or fewer events at once based on the input
+> **Scenario 1:** When user hasn’t specified a number, 32 events are shown by default.
+> **Scenario 2:** User can change the number of events displayed.
 
-### Feature 4: Use the App When Offline
+> ### Given-When-Then Format
+>
+> #### Scenario 1: When user hasn’t specified a number, 32 events are shown by default.
+>
+> - _When_ the user has not specified a number of events to view
+> - _Then_ the app should display 32 events by default
+> - _And_ the user should see a list containing information for each of the 32 events
+>
+> #### Scenario 2: User can change the number of events displayed.
+>
+> - _Given_ the user is on the events page
+> - _When_ the user selects the option to specify the number of events to view
+> - _Then_ the app should provide a field to enter the desired number
+> - _When_ the user enters a valid number
+> - _And_ submits the form
+> - _Then_ the events list should display the specified number of events
+> - _And_ the user should see more or fewer events at once based on the input
 
-Scenario 1: Show cached data when there’s no internet connection.
-Scenario 2: Show error when user changes search settings (city, number of events).
-Given-When-Then Format
+> ### Feature 4: Use the App When Offline
+
+**Scenario 1:** Show cached data when there’s no internet connection.
+**Scenario 2:** Show error when user changes search settings (city, number of events).
+
+> ### Given-When-Then Format
+
 Scenario 1: Show cached data when there's no internet connection
 Given the user has previously viewed events while online
 And the user is currently offline
