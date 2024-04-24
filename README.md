@@ -41,25 +41,24 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 ### Feature 2: Show/Hide Event Details.
 
-**Scenario 1:** An event element is collapsed by default.
-**Scenario 2:** User can expand an event to see details.
-**Scenario 3:** User can collapse an event to hide details.
-**Given-When-Then Format**
-**Scenario 1:** Event element is collapsed by default
-Given there are events available in the app
-When the user navigates to the events page
-Then each event element should be in a collapsed state by default
-And the user should see a summary or basic information for each event.
-Scenario 2: User can expand an event to see details.
-Given The user is on the events page
-When the user chooses to expand an event element
-Then the user should see detailed information about that event
-And the other events elements should remain collapsed.
-Scenario 3: User can collapse an event to hide details.
-Given the user is on the events page with an event already expanded
-When the user chooses to hide the event information
-Then the event element should hide the detailed information for that event.
-And other event elements should remain collapsed
+> **Scenario 1:** An event element is collapsed by default.
+> **Scenario 2:** User can expand an event to see details.
+> **Scenario 3:** User can collapse an event to hide details.
+> **Given-When-Then Format** > **Scenario 1:** Event element is collapsed by default
+> **Given\* there are events available in the app
+> **When* the user navigates to the events page
+> \*\*Then* each event element should be in a collapsed state by default
+> And the user should see a summary or basic information for each event.
+> Scenario 2: User can expand an event to see details.
+> Given The user is on the events page
+> When the user chooses to expand an event element
+> Then the user should see detailed information about that event
+> And the other events elements should remain collapsed.
+> Scenario 3: User can collapse an event to hide details.
+> Given the user is on the events page with an event already expanded
+> When the user chooses to hide the event information
+> Then the event element should hide the detailed information for that event.
+> And other event elements should remain collapsed
 
 ### Feature 3: Specify Number of Events
 
