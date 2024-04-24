@@ -62,14 +62,14 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 > - _Then_ the user should see detailed information about that event
 > - _And_ the other events elements should remain collapsed.
 >
-> ### Scenario 3: User can collapse an event to hide details.
+> #### Scenario 3: User can collapse an event to hide details.
 >
 > - _Given_ the user is on the events page with an event already expanded
 > - _When_ the user chooses to hide the event information
 > - _Then_ the event element should hide the detailed information for that event.
 > - _And_ other event elements should remain collapsed
 
-> ### Feature 3: Specify Number of Events
+### Feature 3: Specify Number of Events
 
 > **Scenario 1:** When user hasn’t specified a number, 32 events are shown by default.
 > **Scenario 2:** User can change the number of events displayed.
@@ -92,25 +92,28 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 > - _Then_ the events list should display the specified number of events
 > - _And_ the user should see more or fewer events at once based on the input
 
-> ### Feature 4: Use the App When Offline
+### Feature 4: Use the App When Offline
 
-**Scenario 1:** Show cached data when there’s no internet connection.
-**Scenario 2:** Show error when user changes search settings (city, number of events).
+> **Scenario 1:** Show cached data when there’s no internet connection.
+> **Scenario 2:** Show error when user changes search settings (city, number of events).
 
 > ### Given-When-Then Format
 
-Scenario 1: Show cached data when there's no internet connection
-Given the user has previously viewed events while online
-And the user is currently offline
-When the user opens the app
-Then the app should display cached events data
-And the user should be able to navigate and interact with the cached events
-Scenario 2: Show error when user changes search settings (city number, of events)
-Given the user has previously viewed events while online
-And the user is currently offline
-When the user attempts to search settings (city, number of events)
-Then the app should display an error message
-And the user should not be able to modify the search settings while offline.
+> #### Scenario 1: Show cached data when there's no internet connection
+>
+> - _Given_ the user has previously viewed events while online
+> - _And_ the user is currently offline
+> - _When_ the user opens the app
+> - _Then_ the app should display cached events data
+> - _And_ the user should be able to navigate and interact with the cached events
+>
+> #### Scenario 2: Show error when user changes search settings (city number, of events)
+>
+> - _Given_ the user has previously viewed events while online
+> - _And_ the user is currently offline
+> - _When_ the user attempts to search settings (city, number of events)
+> - _Then_ the app should display an error message
+> - _And_ the user should not be able to modify the search settings while offline.
 
 ### Feature 5: Add an App Shortcut to the Home Screen
 
@@ -119,15 +122,18 @@ This feature does not need a development since it could be achieve by using the 
 
 ### Feature 6: Display Charts Visualizing Event Details
 
-Scenario 1: Show a chart with the number of upcoming events in each city.
-Given-When-Then Format
-Scenario 1: Show a chart with the number of upcoming events in each city
-Given there are upcoming events in multiple cities
-When the user navigates to the event charts section
-Then the app should display a chart
-And the chart should represent the number of upcoming events in each city
-And each city on the chart should be labeled
-And the user should be able to visually interpret the distribution of events in different cities
+> #### Scenario 1: Show a chart with the number of upcoming events in each city.
+
+> ### Given-When-Then Format
+
+> #### Scenario 1: Show a chart with the number of upcoming events in each city
+>
+> - _Given_ there are upcoming events in multiple cities
+> - _When_ the user navigates to the event charts section
+> - _Then_ the app should display a chart
+> - _And_ the chart should represent the number of upcoming events in each city
+> - _And_ each city on the chart should be labeled
+> - _And_ the user should be able to visually interpret the distribution of events in different cities
 
 ## Technologies Used
 
