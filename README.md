@@ -1,34 +1,26 @@
 # Meet App
 
+Meet is a Progressive Web App (PWA) designed to manage events seamlessly both online and offline. Users can log in using Google's OAuth, access their Google Calendar events, and interact with a user-friendly interface. The application also includes visual representations of data through graphs and charts. Extensive testing has been implemented using technologies such as Google's Puppeteer, JEST, and Cucumber Gherkin.
+
 ## Objective
 
 Create a serverless, progressive web application (PWA) in React following the test-driven development (TDD) approach, integrating with Google Calendar API to fetch and showcase upcoming events.
 
 ## Context
 
-Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to
-be the future of web development. By combining these two concepts, your app will not only work as a
-normal web application, but it will also reap the benefits of both serverless architecture and PWAs:
-● Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.
-● PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,
-responsive design, and cross-platform compatibility.
-For this app, you’ll be using a TDD approach (Test Driven Development), where you write tests before writing the actual
-functionality for your app in code. Writing tests forces you to focus on the requirements of your
-application before jumping into the code. TDD relies on the repetition of a very short development
-cycle, allowing you to get immediate feedback and deliver high-quality code.
-Last but not least, you’ll add some graphs to your app, which will make it more visually appealing and
-allow you to more easily draw conclusions from the data. A picture is worth a thousand words, right?
-With a number of visualization techniques under your belt, you’ll be able to display any type of data
-you want and produce a variety of output formats. Your app will allow users to search for a city and
-get a list of events hosted in that city. For the data visualization component, you’ll add two
-charts—one that shows how many events will take place in each location (via a scatterplot), and
-another that visualizes the popularity of event genres (via a pie chart).
+Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, your app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs:
+
+- Serverless: No backend maintenance, easy to scale, always available, no cost for idle time.
+- PWAs: Instant loading, offline support, push notifications, “add to home screen” prompt,
+  responsive design, and cross-platform compatibility.
+  For this app, you’ll be using a TDD approach (Test Driven Development), where you write tests before writing the actual functionality for your app in code. Writing tests forces you to focus on the requirements of your application before jumping into the code. TDD relies on the repetition of a very short development cycle, allowing you to get immediate feedback and deliver high-quality code. Last but not least, you’ll add some graphs to your app, which will make it more visually appealing and allow you to more easily draw conclusions from the data. A picture is worth a thousand words, right? With a number of visualization techniques under your belt, you’ll be able to display any type of data
+  you want and produce a variety of output formats. Your app will allow users to search for a city and get a list of events hosted in that city. For the data visualization component, you’ll add two charts—one that shows how many events will take place in each location (via a scatterplot), and another that visualizes the popularity of event genres (via a pie chart).
 
 ## Use of the Serverless Function in the App.
 
 Serverless Authorization Function (AWS Lambda OAuth) will be used to provide authentication to the clients of my Meet app by using the third-party app of Google. This will allow the clients to authenticate without the need for clients to share credentials, an then an acess token or authorization code will be generated for each user, that authorizes your Meet app user to see the event data from the Google API.
 
-# Your Project Requirements
+# Requirements
 
 ## Key Features:
 
@@ -122,6 +114,53 @@ And the chart should represent the number of upcoming events in each city
 And each city on the chart should be labeled
 And the user should be able to visually interpret the distribution of events in different cities
 
-# Project Website
+## Technologies Used
 
-For live demo, please visit the link [Here](https://lexivn.github.io/meet).
+- **React**: A JavaScript library for building user interfaces.
+- **Recharts**: A composable charting library for React.
+- **Google OAuth**: Authentication protocol used for user login.
+- **Puppeteer**: A Node library that provides a high-level API to control headless browsers or full browsers over the DevTools Protocol.
+- **JEST**: A JavaScript testing framework for React applications.
+- **Cucumber Gherkin**: A behavior-driven development (BDD) tool that allows developers to write tests in a natural language style.
+
+## Getting Started
+
+To run Let'sMeet locally, follow these steps:
+
+1. Clone the repository: `https://github.com/lexivn/meet.git`
+2. Install dependencies: `npm install`
+3. Start the application: `npm start`
+
+## Features
+
+- **OAuth Login**: Users can securely log in using Google's OAuth for authentication.
+- **Google Calendar Integration**: Access and display events from the user's Google Calendar.
+- **Offline Capability**: The PWA is designed to work seamlessly even when the user is offline.
+- **Graphs and Charts**: Visual representation of data through graphs and charts.
+- **Testing**: Extensive testing using JEST, Puppeteer, and Cucumber Gherkin.
+
+## Scripts
+
+- `npm start`: Start the development server.
+- `npm build`: Build the application for production.
+- `npm test`: Run tests using JEST.
+- `npm run eject`: Eject from Create React App configuration.
+- `npm run predeploy`: Build script for deployment.
+- `npm run deploy`: Deploy the application to GitHub Pages.
+
+## Deployment
+
+The application is deployed on GitHub Pages at [Here](https://lexivn.github.io/meet).
+
+## Author
+
+- **Alex Soto**
+<div id="badges">
+  <a href="https://www.linkedin.com/in/alexisedson/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+</div>
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
