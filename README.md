@@ -41,9 +41,12 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 ### Feature 2: Show/Hide Event Details.
 
-> **Scenario 1:** An event element is collapsed by default.
-> **Scenario 2:** User can expand an event to see details.
-> **Scenario 3:** User can collapse an event to hide details.
+> # **Scenario 1:** An event element is collapsed by default.
+>
+> # **Scenario 2:** User can expand an event to see details.
+>
+> # **Scenario 3:** User can collapse an event to hide details.
+>
 > **Given-When-Then Format** > **Scenario 1:** Event element is collapsed by default
 > **Given\* there are events available in the app
 > **When* the user navigates to the events page
