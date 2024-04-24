@@ -51,9 +51,9 @@ Serverless Authorization Function (AWS Lambda OAuth) will be used to provide aut
 
 > #### Scenario 1: Event element is collapsed by default
 >
-> _Given_ there are events available in the app
-> _When_ the user navigates to the events page
-> _Then_ each event element should be in a collapsed state by default And the user hould see a summary or basic information for each event.
+> - _Given_ there are events available in the app
+> - _When_ the user navigates to the events page
+> - _Then_ each event element should be in a collapsed state by default And the user hould see a summary or basic information for each event.
 >
 > #### Scenario 2: User can expand an event to see details.
 >
